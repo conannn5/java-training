@@ -1,7 +1,5 @@
 package ClassesAndObjects;
 
-import java.util.ArrayList;
-
 public class Human {
     private String name;
     private String surname;
@@ -58,7 +56,7 @@ public class Human {
     void setWeight(int weight, int age ) {
         if (weight <=0) {
             System.out.println("'Вес' не может равняться или быть меньше нуля");
-        }else if (age >= 20 && weight >= 40 ) {
+        }else if (age >= 20 && weight <= 40 ) {
             System.out.println("Для возраста больше 20 лет вес не должен быть таким маленьким"); // сомнительная проверка
         }else {
             this.weight = weight;
@@ -95,14 +93,37 @@ public class Human {
         return weight;
     }
 
-    public ArrayList listOfPersons () {
-        ArrayList  persons = new ArrayList<>();
-        persons.add(getName());
-        persons.add(getSurname());
-        persons.add(age);
-        persons.add(weight);
-        persons.add(height);
+    public String getString () {
+        String list = toString();
 
-        return persons;
+        return list;
     }
+
+    @Override
+    public String toString() {
+        return  "Меня зовут " + name + '\'' +
+                surname + '\'' +
+                " мне " + age +
+                " лет и я вешу " + weight +
+                "кг. плюс мой рост равен " + height +
+                "см.";
+    }
+
+    /*public void stringOfPersons () {
+        String stringBuilder = "Здрасьте, меня зовут " +
+                name +
+                " " +
+                surname +
+                " мне " +
+                age +
+                " года, я вешу " +
+                weight +
+                "кг.. Ростом я " +
+                height +
+                "см.";
+
+        System.out.println(stringBuilder);
+    }
+
+     */
 }

@@ -40,5 +40,12 @@ public class Switch {
                 System.out.println("Кто ты такой");
         }
 
+        // Просто эксперимент с тернарным оператором //
+        System.out.println("Введите число от 1 до 25");
+        int y = scanner.nextInt();
+        int x = (y > 10) ? 1 : 25;
+        System.out.println(x);
+
+
     }
 }

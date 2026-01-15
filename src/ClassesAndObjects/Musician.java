@@ -19,4 +19,9 @@ public class Musician extends Human {
     public String getProfession() {
         return profession;
     }
+    @Override
+    public String toString() {
+        return super.toString() + " Профессия " + profession;
+
+    }
 }
